@@ -132,7 +132,7 @@ export default {
         type: 'image/png',
         href: `${siteDomain + publicRoot}favicon-16x16.png`
       },
-      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'manifest', href: `${siteDomain + publicRoot}site.webmanifest` },
       {
         rel: 'mask-icon',
         color: '#3759e2',
