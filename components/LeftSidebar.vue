@@ -12,7 +12,7 @@
       <div
         v-for="page in $store.getters['pages/list']"
         :key="page.path"
-        :data-path="publicRoot + page.path"
+        :data-path="page.path"
         class="item"
       >
         <nuxt-link :to="page.path">{{ page.label }}</nuxt-link>
@@ -44,7 +44,9 @@ export default {
   },
   methods: {
     getLinkOffsetTop() {
-      const $el = this.$el.querySelector(`[data-path="${this.currentPath}"]`)
+      const $el = this.$el.querySelector(
+        `[data-path="/${this.currentPath.replace(this.publicRoot)}"]`
+      )
       const offsetTop = $el.offsetTop - 45
 
       this.$el.querySelector('.progress').velocity({
