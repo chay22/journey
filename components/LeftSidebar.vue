@@ -44,9 +44,11 @@ export default {
   },
   methods: {
     getLinkOffsetTop() {
-      const $el = this.$el.querySelector(
-        `[data-path="${this.currentPath.replace(this.publicRoot, '')}"]`
-      )
+      console.log(this.$route, this.publicRoot)
+      let $el = this.$el.querySelector(`[href="${this.$route.fullPath}"]`)
+
+      $el = $el.parent()
+
       const offsetTop = $el.offsetTop - 45
 
       this.$el.querySelector('.progress').velocity({
