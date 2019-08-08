@@ -42,7 +42,7 @@
     <transition name="slide-left" appear>
       <div
         class="projects scrollable"
-        style="overflow: hidden;"
+        style="overflow: hidden; visibility: hidden; opacity: 0;"
         @mouseenter="onProjectMouseEnter"
         @mouseleave="onProjectMouseLeave"
       >
@@ -79,7 +79,7 @@ export default {
     const SEO = this.$seo.set({
       title: 'Chay - Jan 2016',
       description: 'Chay journey on January 2016',
-      url: '/jan-2016'
+      slug: 'jan-2016'
     })
 
     return {
@@ -100,13 +100,21 @@ export default {
     }
   },
   mounted() {
+    document.body.style.overflow = 'hidden'
     this.$nextTick(() => {
       setTimeout(() => {
         window.scrollTo(0, 2)
         this.$store.dispatch('pages/setLastScrollTop')
         this.$store.dispatch('pages/ready')
-        this.$el.querySelector('.scrollable').style.overflow = ''
-      }, 100)
+        window.scrollTo(0, 2)
+        setTimeout(() => {
+          this.$el.querySelector('.scrollable').style.overflow = ''
+          this.$el.querySelector('.scrollable').style.visibility = ''
+          this.$el.querySelector('.scrollable').velocity({
+            opacity: 1
+          })
+        }, 1200)
+      }, 200)
     })
   },
   beforeDestroy() {

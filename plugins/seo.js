@@ -1,5 +1,8 @@
 import Vue from 'vue'
 
+const publicRoot = process.env.baseRootUrl
+const siteDomain = process.env.siteDomain
+
 class Seo {
   constructor(data) {
     this._data = data
@@ -12,6 +15,9 @@ class Seo {
   }
   meta() {
     const SEO = this._data
+
+    SEO.slug = siteDomain + publicRoot + SEO.slug
+
     return [
       { hid: 'description', name: 'description', content: SEO.description },
       { hid: 'itemprop:name', itemprop: 'name', content: SEO.title },
@@ -35,7 +41,7 @@ class Seo {
         content: SEO.description
       },
       // { hid: 'og:image', name: 'og:image', content: SEO.image },
-      { hid: 'og:url', name: 'og:url', content: SEO.url || '/' }
+      { hid: 'og:url', name: 'og:url', content: SEO.slug || '/' }
     ]
   }
 }

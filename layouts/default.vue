@@ -27,6 +27,9 @@ export default {
     window.addEventListener(
       'scroll',
       debounce((e) => {
+        if (document.body.classList.contains('unready')) {
+          return
+        }
         if (
           !(
             (e.target &&
@@ -43,7 +46,7 @@ export default {
           this.detectScrollDirection()
         }
       }),
-      500
+      300
     )
     window.addEventListener(
       'keydown',
@@ -123,9 +126,12 @@ html {
   margin: 0;
 }
 
-html,
 body {
   min-height: calc(0.25em + 100%);
+}
+html,
+body.unready {
+  height: 100%;
 }
 
 body {
@@ -133,10 +139,10 @@ body {
   color: #fff;
 }
 
-html {
+/*html {
   overflow: scroll;
   overflow-x: hidden;
-}
+}*/
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
@@ -198,12 +204,12 @@ button {
   width: calc(100% - var(--sidebar-width));
   margin: 0 auto;
   left: var(--sidebar-width);
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--color-primary);
   z-index: 1;
+  height: 100%;
   transition: filter 0.3s ease-in, transform 0.4s ease-out;
   font-size: 125%;
   font-weight: 500;

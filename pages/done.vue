@@ -89,7 +89,7 @@ export default {
     const SEO = this.$seo.set({
       title: 'Chay - Thank you!',
       description: 'Thank you for reading my journey!',
-      url: '/done'
+      slug: 'done'
     })
 
     return {
@@ -105,11 +105,13 @@ export default {
     return 'slide-down'
   },
   mounted() {
+    document.body.style.overflow = 'hidden'
     this.$nextTick(() => {
       setTimeout(() => {
         window.scrollTo(0, 2)
         this.$store.dispatch('pages/setLastScrollTop')
         this.$store.dispatch('pages/ready')
+        window.scrollTo(0, 2)
         setTimeout(() => {
           this.$el.querySelector('.mamang').style.display = ''
         }, 500)
@@ -126,6 +128,7 @@ export default {
 .page {
   justify-content: initial;
   align-items: initial;
+  padding-top: 6rem;
 }
 .page:before {
   content: '';
@@ -174,7 +177,7 @@ export default {
 }
 .thanks-list > .thanks {
   padding: 0.25rem 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 350;
 }
 .build-time {

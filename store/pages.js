@@ -102,9 +102,13 @@ export const actions = {
       }
     }
   },
-  ready({ commit, state }) {
+  ready({ commit, state }, scroll = true) {
     return new Promise((resolve) => {
       setTimeout(() => {
+        document.body.classList.remove('unready')
+        if (scroll) {
+          window.scrollTo(0, 2)
+        }
         document.body.style.overflow = ''
         commit('PAGE_READY')
         resolve()
@@ -114,6 +118,8 @@ export const actions = {
   notReady({ commit }) {
     commit('PAGE_NOT_READY')
     document.body.style.overflow = 'hidden'
+    document.body.classList.add('unready')
+    commit('SET_LAST_SCROLL_TOP', 0)
   },
   setLastScrollTop({ commit }, st) {
     if (typeof st === 'undefined') {

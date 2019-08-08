@@ -35,7 +35,7 @@ export default {
     const SEO = this.$seo.set({
       title: 'Chay - Apr 2017',
       description: 'Chay journey on April 2017',
-      url: '/apr-2017'
+      slug: 'apr-2017'
     })
 
     return {
@@ -61,6 +61,7 @@ export default {
         window.scrollTo(0, 2)
         this.$store.dispatch('pages/setLastScrollTop')
         this.$store.dispatch('pages/ready')
+        window.scrollTo(0, 2)
       }, 100)
     })
   },

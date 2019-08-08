@@ -37,7 +37,7 @@ export default {
     const SEO = this.$seo.set({
       title: 'Chay - A little journey of mine',
       description: 'A little journey about web development of Chay',
-      url: '/'
+      slug: ''
     })
 
     return {
@@ -52,15 +52,8 @@ export default {
 
     return 'slide-up'
   },
-  data() {
-    return {
-      mamangLoaderStyle: {
-        display: 'none'
-      }
-    }
-  },
   mounted() {
-    this.$store.dispatch('pages/ready')
+    this.$store.dispatch('pages/ready', false)
   },
   beforeDestroy() {
     const $el = this.$el

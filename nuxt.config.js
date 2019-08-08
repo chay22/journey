@@ -6,10 +6,17 @@ const routerBase =
         }
       }
     : {}
+const publicRoot = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/journey/' : '/'
+const siteDomain =
+  process.env.DEPLOY_ENV === 'GH_PAGES' ? 'https://chay22.github.io' : ''
 
 export default {
   mode: 'spa',
   ...routerBase,
+  env: {
+    baseRootUrl: publicRoot,
+    siteDomain
+  },
   /*
    ** Headers of the page
    */
@@ -32,7 +39,11 @@ export default {
         content: 'A little journey of Chay',
         hid: 'itemprop:description'
       },
-      { itemprop: 'image', content: '/logo2.png', hid: 'itemprop:image' },
+      {
+        itemprop: 'image',
+        content: `${publicRoot}logo2.png`,
+        hid: 'itemprop:image'
+      },
       //
       {
         hid: 'twitter:card',
@@ -54,7 +65,7 @@ export default {
       {
         hid: 'twitter:image:src',
         name: 'twitter:image:src',
-        content: '/logo2.png'
+        content: `${publicRoot}logo2.png`
       },
       {
         hid: 'og:title',
@@ -69,7 +80,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: '/logo2.png'
+        content: `${publicRoot}logo2.png`
       },
       {
         hid: 'og:url',
@@ -101,16 +112,28 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: `${publicRoot}favicon.ico` },
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
         href: '/apple-touch-icon.png'
       },
-      { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        href: `${publicRoot}favicon-32x32.png`
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        href: `${publicRoot}favicon-16x16.png`
+      },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'mask-icon', color: '#3759e2', href: '/safari-pinned-tab.svg' }
+      {
+        rel: 'mask-icon',
+        color: '#3759e2',
+        href: `${publicRoot}safari-pinned-tab.svg`
+      }
     ]
   },
   /*

@@ -74,7 +74,7 @@ export default {
     const SEO = this.$seo.set({
       title: 'Chay - Dec 2016',
       description: 'Chay journey on December 2016',
-      url: '/dec-2016'
+      slug: 'dec-2016'
     })
 
     return {
@@ -97,12 +97,14 @@ export default {
     }
   },
   mounted() {
+    document.body.style.overflow = 'hidden'
     this.$nextTick(() => {
       setTimeout(() => {
         window.scrollTo(0, 2)
         this.$store.dispatch('pages/setLastScrollTop')
         this.$store.dispatch('pages/ready')
-      }, 100)
+        window.scrollTo(0, 2)
+      }, 300)
     })
   },
   beforeDestroy() {
