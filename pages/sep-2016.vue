@@ -1,6 +1,6 @@
 <template>
   <div id="page-sep-2016" class="page">
-    <h1>Sep 2016</h1>
+    <h1 class="title-date">Sep 2016</h1>
     <transition name="fade-2" appear>
       <div class="content">
         <p>
@@ -45,6 +45,18 @@
 
 <script>
 export default {
+  head() {
+    const SEO = this.$seo.set({
+      title: 'Chay - Sep 2016',
+      description: 'Chay journey on September 2016',
+      url: '/sep-2016'
+    })
+
+    return {
+      title: SEO.title(),
+      meta: SEO.meta()
+    }
+  },
   transition(to, from) {
     if (!from) {
       return 'slide-up'
@@ -68,10 +80,6 @@ export default {
 </script>
 
 <style scoped>
-.page {
-  flex-direction: column;
-  padding: 2rem 4em;
-}
 .page:after {
   content: '';
   position: absolute;
@@ -83,24 +91,5 @@ export default {
   height: 30%;
   z-index: -1;
   transform: rotate(-5deg) scale(1.1);
-}
-h1 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-.content {
-  margin-bottom: 2rem;
-}
-.so- {
-  width: 5rem;
-  height: 5rem;
-  border: 0.3em solid #162c84;
-  box-shadow: 0px 1px 5px 0px rgba(60, 60, 60, 0.5);
-}
-.st0 {
-  fill: #bcbbbb;
-}
-.st1 {
-  fill: #f48023;
 }
 </style>

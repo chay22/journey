@@ -12,7 +12,7 @@ export const actions = {
   setState({ commit }, payload) {
     commit('SET_STATE', payload)
 
-    if (payload.persist) {
+    if (payload.persist && this.$isSupported.webStorage()) {
       const items = JSON.parse(localStorage.getItem('ctastates'))
       localStorage.setItem(
         'ctastates',

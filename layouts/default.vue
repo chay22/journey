@@ -97,6 +97,10 @@ export default {
     'Helvetica Neue', Arial, sans-serif;
   --rect-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
   --rect-border-radius: 0.1em;
+  --color-primary: #3759e2;
+  --color-secondary: #213586;
+  --color-accent: #fff;
+  --sidebar-width: 15rem;
   font-size: 16px;
 }
 
@@ -125,7 +129,7 @@ body {
 }
 
 body {
-  background-color: #3759e2;
+  background-color: var(--color-primary);
   color: #fff;
 }
 
@@ -182,7 +186,7 @@ button {
 
 .left-sidebar {
   display: flex;
-  width: 15rem;
+  width: var(--sidebar-width);
   background-color: #3355dd;
   height: 100%;
   position: fixed;
@@ -191,18 +195,20 @@ button {
 
 .page {
   position: fixed;
-  width: calc(100% - 15rem);
+  width: calc(100% - var(--sidebar-width));
   margin: 0 auto;
-  left: 15rem;
+  left: var(--sidebar-width);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3759e2;
+  background-color: var(--color-primary);
   z-index: 1;
   transition: filter 0.3s ease-in, transform 0.4s ease-out;
   font-size: 125%;
   font-weight: 500;
+  flex-direction: column;
+  padding: 2rem 4em;
 }
 
 .page .content {
@@ -213,6 +219,12 @@ button {
   border-radius: var(--rect-border-radius);
   color: #020304;
   font-weight: 350;
+  margin-bottom: 2em;
+}
+
+.page h1.title-date {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 body.page-blur .page {

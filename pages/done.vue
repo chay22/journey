@@ -26,13 +26,13 @@
       <h2>Thanks to:</h2>
       <div class="thanks-list">
         <div class="thanks">
+          GitHub
+        </div>
+        <div class="thanks">
           Vue.js
         </div>
         <div class="thanks">
           Nuxt.js
-        </div>
-        <div class="thanks">
-          Velocity.js
         </div>
         <div class="thanks">svgp{{ 'o' }}{{ 'r' }}{{ 'n' }}</div>
         <div class="thanks">
@@ -64,11 +64,39 @@
         </div>
       </div>
     </div>
+    <div class="build-time">
+      <div class="created-at">
+        <span class="label-time">Created at</span>
+        <span class="value-time">8 Aug 2019</span>
+      </div>
+      <div class="updated-at">
+        <span class="label-time">Updated at</span>
+        <span class="value-time">8 Aug 2019</span>
+      </div>
+    </div>
+    <mamang-loader class="mamang" style="display: none;" />
   </div>
 </template>
 
 <script>
+import MamangLoader from '~/components/MamangLoader'
+
 export default {
+  components: {
+    MamangLoader
+  },
+  head() {
+    const SEO = this.$seo.set({
+      title: 'Chay - Thank you!',
+      description: 'Thank you for reading my journey!',
+      url: '/done'
+    })
+
+    return {
+      title: SEO.title(),
+      meta: SEO.meta()
+    }
+  },
   transition(to, from) {
     if (!from) {
       return 'slide-up'
@@ -82,6 +110,9 @@ export default {
         window.scrollTo(0, 2)
         this.$store.dispatch('pages/setLastScrollTop')
         this.$store.dispatch('pages/ready')
+        setTimeout(() => {
+          this.$el.querySelector('.mamang').style.display = ''
+        }, 500)
       }, 100)
     })
   },
@@ -93,8 +124,6 @@ export default {
 
 <style scoped>
 .page {
-  flex-direction: column;
-  padding: 2rem 4em;
   justify-content: initial;
   align-items: initial;
 }
@@ -106,12 +135,8 @@ export default {
   background-image: linear-gradient(-90deg, #213586, #1c3492, #2d46ab, #2641ab);
   content: '';
   bottom: 0;
-  height: 40%;
+  height: 30%;
   z-index: -1;
-}
-h1 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
 }
 .now-you-know {
   font-size: 2.475rem;
@@ -152,6 +177,13 @@ h1 {
   font-size: 0.9rem;
   font-weight: 350;
 }
+.build-time {
+  position: absolute;
+  font-size: 0.7rem;
+  bottom: 1em;
+  right: 1em;
+  color: #0e1a4c;
+}
 @keyframes bgslide {
   from {
     opacity: 0;
@@ -160,6 +192,33 @@ h1 {
   to {
     opacity: 1;
     margin-left: 0;
+  }
+}
+
+.mamang {
+  z-index: -1;
+  position: fixed;
+  bottom: -50%;
+  animation: dance 2.5s 10s infinite alternate ease-in-out;
+}
+@keyframes dance {
+  from,
+  49% {
+    transform-origin: -450% 100%;
+  }
+  50%,
+  75%,
+  to {
+    transform-origin: 550% 100%;
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
   }
 }
 </style>

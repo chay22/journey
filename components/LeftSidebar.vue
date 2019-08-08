@@ -40,7 +40,7 @@ export default {
   methods: {
     getLinkOffsetTop() {
       const $el = this.$el.querySelector(`[data-path="${this.currentPath}"]`)
-      const offsetTop = $el.offsetTop - 35
+      const offsetTop = $el.offsetTop - 45
 
       this.$el.querySelector('.progress').velocity({
         height: offsetTop + 'px'
@@ -53,10 +53,11 @@ export default {
 <style>
 .left-sidebar {
   display: flex;
-  padding: 3rem 2rem;
+  padding: 3rem 3.5rem;
 }
 .left-sidebar > .line {
-  height: 100%;
+  height: 98.5%;
+  margin-top: 0.25em;
   width: 0.5em;
   background-color: #ddd;
   position: relative;
@@ -110,7 +111,8 @@ export default {
 }
 .left-sidebar a {
   color: #fff;
-  font-weight: bold;
+  font-weight: 300;
+  text-decoration: none;
 }
 
 @keyframes progress-p-p1 {

@@ -1,6 +1,6 @@
 <template>
   <div id="page-jan-2016" class="page">
-    <h1>Jan 2016</h1>
+    <h1 class="title-date">Jan 2016</h1>
     <transition name="fade-2" appear>
       <div class="content">
         <p>
@@ -75,6 +75,18 @@
 
 <script>
 export default {
+  head() {
+    const SEO = this.$seo.set({
+      title: 'Chay - Jan 2016',
+      description: 'Chay journey on January 2016',
+      url: '/jan-2016'
+    })
+
+    return {
+      title: SEO.title(),
+      meta: SEO.meta()
+    }
+  },
   transition(to, from) {
     if (!from) {
       return 'slide-up'
@@ -113,10 +125,6 @@ export default {
 </script>
 
 <style scoped>
-.page {
-  flex-direction: column;
-  padding: 2rem 4em;
-}
 .page:before {
   content: '';
   position: absolute;
@@ -139,13 +147,6 @@ export default {
   bottom: 45%;
   height: 60%;
   z-index: -1;
-}
-h1 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-.content {
-  margin-bottom: 2rem;
 }
 .so- {
   text-align: right;

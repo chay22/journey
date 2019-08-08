@@ -14,17 +14,104 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Chay',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'msapplication-TileColor', content: '#ffffff' },
+      { name: 'theme-color', content: '#ffffff' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'A little journey of Chay'
+      },
+      //
+      { itemprop: 'name', content: 'Chay', hid: 'itemprop:name' },
+      {
+        itemprop: 'description',
+        content: 'A little journey of Chay',
+        hid: 'itemprop:description'
+      },
+      { itemprop: 'image', content: '/logo2.png', hid: 'itemprop:image' },
+      //
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Chay - A little journey of mine'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'A little journey of Chay'
+      },
+      { name: 'twitter:site', content: '@chyir' },
+      { name: 'twitter:creator', content: '@chyir' },
+      {
+        hid: 'twitter:image:src',
+        name: 'twitter:image:src',
+        content: '/logo2.png'
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Chay - A little journey of mine'
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'A little journey of Chay'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: '/logo2.png'
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: '/'
+      },
+      { name: 'og:site_name', content: 'Chay - A little journey of mine' },
+      { name: 'og:type', content: 'Article' },
+      {
+        hid: 'article:section',
+        name: 'article:section',
+        content: 'Technology'
+      },
+      {
+        hid: 'article:published_time',
+        name: 'article:published_time',
+        content: '2019-08-08T16:00:57.185Z'
+      },
+      {
+        hid: 'article:modified_time',
+        name: 'article:modified_time',
+        content: new Date().toISOString()
+      },
+      { name: 'article:author', content: 'Cahyadi Nugraha' },
+      {
+        hid: 'article:tag',
+        name: 'article:tag',
+        content: 'web development, journey, laravel, programming, javascript'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png'
+      },
+      { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'mask-icon', color: '#3759e2', href: '/safari-pinned-tab.svg' }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -38,8 +125,10 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    { src: '~/plugins/feature-detect', mode: 'client' },
     { src: '~/plugins/velocity', mode: 'client' },
-    { src: '~/plugins/cta-states', mode: 'client' }
+    { src: '~/plugins/cta-states', mode: 'client' },
+    { src: '~/plugins/seo', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -56,6 +145,8 @@ export default {
    ** Build configuration
    */
   build: {
+    publicPath: '/public/',
+    extractCSS: true,
     /*
      ** You can extend webpack config here
      */

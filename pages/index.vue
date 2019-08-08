@@ -33,6 +33,18 @@
 
 <script>
 export default {
+  head() {
+    const SEO = this.$seo.set({
+      title: 'Chay - A little journey of mine',
+      description: 'A little journey about web development of Chay',
+      url: '/'
+    })
+
+    return {
+      title: SEO.title(),
+      meta: SEO.meta()
+    }
+  },
   transition(to, from) {
     if (!from) {
       return 'slide-down'
