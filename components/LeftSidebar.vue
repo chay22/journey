@@ -45,7 +45,7 @@ export default {
   methods: {
     getLinkOffsetTop() {
       const $el = this.$el.querySelector(
-        `[data-path="/${this.currentPath.replace(this.publicRoot)}"]`
+        `[data-path="/${this.currentPath.replace(this.publicRoot, '')}"]`
       )
       const offsetTop = $el.offsetTop - 45
 
