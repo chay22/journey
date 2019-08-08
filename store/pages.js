@@ -1,63 +1,65 @@
+const publicRoot = process.env.baseRootUrl
+
 export const state = () => ({
   list: [
     {
-      path: '/',
+      path: `${publicRoot}`,
       label: 'Hello'
     },
     {
-      path: '/jan-2016',
+      path: `${publicRoot}jan-2016`,
       label: 'Jan 2016'
     },
     {
-      path: '/sep-2016',
+      path: `${publicRoot}sep-2016`,
       label: 'Sep 2016'
     },
     {
-      path: '/oct-2016',
+      path: `${publicRoot}oct-2016`,
       label: 'Oct 2016'
     },
     {
-      path: '/nov-2016',
+      path: `${publicRoot}nov-2016`,
       label: 'Nov 2016'
     },
     {
-      path: '/dec-2016',
+      path: `${publicRoot}dec-2016`,
       label: 'Dec 2016'
     },
     {
-      path: '/feb-2017',
+      path: `${publicRoot}feb-2017`,
       label: 'Feb 2017'
     },
     {
-      path: '/apr-2017',
+      path: `${publicRoot}apr-2017`,
       label: 'Apr 2017'
     },
     {
-      path: '/may-2017',
+      path: `${publicRoot}may-2017`,
       label: 'May 2017'
     },
     {
-      path: '/jun-2017',
+      path: `${publicRoot}jun-2017`,
       label: 'Jun 2017'
     },
     {
-      path: '/dec-2017',
+      path: `${publicRoot}dec-2017`,
       label: 'Dec 2017'
     },
     {
-      path: '/feb-2018',
+      path: `${publicRoot}feb-2018`,
       label: 'Feb 2018'
     },
     {
-      path: '/nov-2018',
+      path: `${publicRoot}nov-2018`,
       label: 'Nov 2018'
     },
     {
-      path: '/jan-2019',
+      path: `${publicRoot}jan-2019`,
       label: 'Jan 2019'
     },
     {
-      path: '/done',
+      path: `${publicRoot}done`,
       label: 'Done'
     }
   ],
