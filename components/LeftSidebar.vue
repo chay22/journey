@@ -12,7 +12,7 @@
       <div
         v-for="page in $store.getters['pages/list']"
         :key="page.path"
-        :data-path="page.path"
+        :data-path="publicRoot + page.path"
         class="item"
       >
         <nuxt-link :to="page.path">{{ page.label }}</nuxt-link>
@@ -24,6 +24,11 @@
 <script>
 export default {
   name: 'LeftSidebar',
+  data() {
+    return {
+      publicRoot: process.env.baseRootUrl
+    }
+  },
   computed: {
     currentPath() {
       return this.$route.path
