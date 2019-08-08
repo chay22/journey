@@ -1,0 +1,49 @@
+{
+  "name": "nuxt",
+  "version": "1.0.0",
+  "description": "My fantabulous Nuxt.js project",
+  "author": "Cahyadi Nugraha",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.vue --fix --ignore-path .gitignore .",
+    "test": "jest",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "nuxt": "^2.0.0",
+    "velocity-animate": "^2.0.5"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.6.0",
+    "jest": "^24.1.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.16.4",
+    "vue-jest": "^4.0.0-0"
+  }
+}
