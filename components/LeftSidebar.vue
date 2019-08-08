@@ -44,6 +44,9 @@ export default {
   },
   methods: {
     getLinkOffsetTop() {
+      console.log(this.currentPath.replace(this.publicRoot, ''))
+      console.log(this.currentPath)
+      console.log(this.publicRoot)
       const $el = this.$el.querySelector(
         `[data-path="/${this.currentPath.replace(this.publicRoot, '')}"]`
       )
