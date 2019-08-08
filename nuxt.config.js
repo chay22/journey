@@ -41,7 +41,7 @@ export default {
       },
       {
         itemprop: 'image',
-        content: `${publicRoot}logo2.png`,
+        content: `${siteDomain + publicRoot}logo2.png`,
         hid: 'itemprop:image'
       },
       //
@@ -65,7 +65,7 @@ export default {
       {
         hid: 'twitter:image:src',
         name: 'twitter:image:src',
-        content: `${publicRoot}logo2.png`
+        content: `${siteDomain + publicRoot}logo2.png`
       },
       {
         hid: 'og:title',
@@ -80,7 +80,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: `${publicRoot}logo2.png`
+        content: `${siteDomain + publicRoot}logo2.png`
       },
       {
         hid: 'og:url',
@@ -112,7 +112,11 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: `${publicRoot}favicon.ico` },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: `${siteDomain + publicRoot}favicon.ico`
+      },
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
@@ -121,18 +125,18 @@ export default {
       {
         rel: 'icon',
         type: 'image/png',
-        href: `${publicRoot}favicon-32x32.png`
+        href: `${siteDomain + publicRoot}favicon-32x32.png`
       },
       {
         rel: 'icon',
         type: 'image/png',
-        href: `${publicRoot}favicon-16x16.png`
+        href: `${siteDomain + publicRoot}favicon-16x16.png`
       },
       { rel: 'manifest', href: '/site.webmanifest' },
       {
         rel: 'mask-icon',
         color: '#3759e2',
-        href: `${publicRoot}safari-pinned-tab.svg`
+        href: `${siteDomain + publicRoot}safari-pinned-tab.svg`
       }
     ]
   },
