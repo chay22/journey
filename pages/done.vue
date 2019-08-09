@@ -1,79 +1,89 @@
 <template>
   <div id="page-done" class="page">
-    <div class="fun-conclusion">
-      <div class="now-you-know">
-        NOW, YOU KNOW
+    <transition name="slide-left" appear>
+      <div class="fun-conclusion">
+        <div class="now-you-know">
+          NOW, YOU KNOW
+        </div>
+        <div class="my-grammar">
+          My <span class="grammar">grammar</span> sucks
+        </div>
+        <div class="but">but anyway,</div>
       </div>
-      <div class="my-grammar">
-        My <span class="grammar">grammar</span> sucks
+    </transition>
+    <transition name="slide-right" appear>
+      <div class="conclusion">
+        <p>
+          The list (of projects) was carefully picked based on amount of fees I
+          received, knowledge I acquired and — most importantly — stuffs I
+          remember. There are some more — according to programming — things
+          (which I might later put them on the list) I've done. Such as WiFi
+          reconnector, Arduino-involved stuffs, WhatsApp broadcaster & auto
+          reply, chat bot (including WhatsApp), etc.
+        </p>
+        <p>
+          I'll try to list them all while fixing my English at my leisure.
+        </p>
       </div>
-      <div class="but">but anyway,</div>
-    </div>
-    <div class="conclusion">
-      <p>
-        The list (of projects) was carefully picked based on amount of fees I
-        received, knowledge I acquired and — most importantly — stuffs I
-        remember. There are some more — according to programming — things (which
-        I might later put them on the list) I've done. Such as WiFi reconnector,
-        Arduino-involved stuffs, WhatsApp broadcaster & auto reply, chat bot
-        (including WhatsApp), etc.
-      </p>
-      <p>
-        I'll try to list them all while fixing my English at my leisure.
-      </p>
-    </div>
+    </transition>
     <div class="thanks-to">
-      <h2>Thanks to:</h2>
-      <div class="thanks-list">
-        <div class="thanks">
-          GitHub
+      <transition name="slide-bottom" appear>
+        <h2>Thanks to:</h2>
+      </transition>
+      <transition name="fade-2" appear>
+        <div class="thanks-list">
+          <div class="thanks">
+            GitHub
+          </div>
+          <div class="thanks">
+            Vue.js
+          </div>
+          <div class="thanks">
+            Nuxt.js
+          </div>
+          <div class="thanks">svgp{{ 'o' }}{{ 'r' }}{{ 'n' }}</div>
+          <div class="thanks">
+            Lodash
+          </div>
+          <div class="thanks">
+            Babel
+          </div>
+          <div class="thanks">
+            ESLint
+          </div>
+          <div class="thanks">
+            Prettier
+          </div>
+          <div class="thanks">
+            Husky
+          </div>
+          <div class="thanks">
+            Jest
+          </div>
+          <div class="thanks">
+            v-fonts.com
+          </div>
+          <div class="thanks">
+            @typeler
+          </div>
+          <div class="thanks">
+            @LeaVerou
+          </div>
         </div>
-        <div class="thanks">
-          Vue.js
-        </div>
-        <div class="thanks">
-          Nuxt.js
-        </div>
-        <div class="thanks">svgp{{ 'o' }}{{ 'r' }}{{ 'n' }}</div>
-        <div class="thanks">
-          Lodash
-        </div>
-        <div class="thanks">
-          Babel
-        </div>
-        <div class="thanks">
-          ESLint
-        </div>
-        <div class="thanks">
-          Prettier
-        </div>
-        <div class="thanks">
-          Husky
-        </div>
-        <div class="thanks">
-          Jest
-        </div>
-        <div class="thanks">
-          v-fonts.com
-        </div>
-        <div class="thanks">
-          @typeler
-        </div>
-        <div class="thanks">
-          @LeaVerou
-        </div>
-      </div>
+      </transition>
     </div>
-    <div class="build-time">
-      <div class="created-at">
-        <span class="label-time">Created at</span>
-        <span class="value-time">8 Aug 2019</span>
+    <transition name="fade-2" appear>
+      <div class="build-time">
+        <div class="created-at">
+          <span class="label-time">Created at</span>
+          <span class="value-time">8 Aug 2019</span>
+        </div>
+        <div class="updated-at">
+          <span class="label-time">Updated at</span>
+          <span class="value-time">9 Aug 2019</span>
+        </div>
       </div>
-      <div class="updated-at">
-        <span class="label-time">Updated at</span>
-        <span class="value-time">8 Aug 2019</span>
-      </div>
-    </div>
+    </transition>
     <mamang-loader class="mamang" style="display: none;" />
   </div>
 </template>

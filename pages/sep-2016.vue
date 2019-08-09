@@ -1,45 +1,47 @@
 <template>
   <div id="page-sep-2016" class="page">
     <h1 class="title-date">Sep 2016</h1>
-    <transition name="fade-2" appear>
-      <div class="content">
-        <p>
-          I joined a team. A team of freelancers. The time I joined, we got more
-          than 10 projects waiting to be done. It's funny, though. Funny because
-          we were 4. Oh, 3 actually. The freshgrad were coming on the next
-          month.
-        </p>
-        <p>
-          I had thinking about it, there is no chance for us to finish them all
-          within a month. Or two. Even three. I didn't care about it that much
-          at that time. As a beginner, had to handle a project all by my self
-          already gave me all I wanted to do. More than enough.
-        </p>
-        <p>
-          I started it with a web-based apps, namely Work and Progress Order
-          system. It recorded customer data, what their order of products and/or
-          services, built contracts to be signed digitally, had mailed list of
-          email which could be massively sent.
-        </p>
-        <p>
-          I couldn't tell how much I feel so much pleased that I could actually
-          make something bigger than what I usually think of.
-        </p>
-      </div>
-    </transition>
-    <transition name="slide-left" appear>
-      <div class="projects">
-        <h2 class="title">Projects</h2>
-        <div class="list">
-          <div class="item">
-            <span class="underline">Platypus WPO</span>
-            which handled work and progress order in photography type of
-            business. Built with Laravel as the engine, AdminLTE as frontend
-            view backbone and jQuery as its view framework.
+    <div class="writing">
+      <transition name="slide-bottom" appear>
+        <div class="content">
+          <p>
+            I joined a team. A team of freelancers. The time I joined, we got
+            more than 10 projects waiting to be done. It's funny, though. Funny
+            because we were 4. Oh, 3 actually. The freshgrad were coming on the
+            next month.
+          </p>
+          <p>
+            I had thinking about it, there is no chance for us to finish them
+            all within a month. Or two. Even three. I didn't care about it that
+            much at that time. As a beginner, had to handle a project all by my
+            self already gave me all I wanted to do. More than enough.
+          </p>
+          <p>
+            I started it with a web-based apps, namely Work and Progress Order
+            system. It recorded customer data, what their order of products
+            and/or services, built contracts to be signed digitally, had mailed
+            list of email which could be massively sent.
+          </p>
+          <p>
+            I couldn't tell how much I feel so much pleased that I could
+            actually make something bigger than what I usually think of.
+          </p>
+        </div>
+      </transition>
+      <transition name="slide-top" appear>
+        <div class="projects">
+          <h2 class="title">Projects</h2>
+          <div class="list">
+            <div class="item">
+              <span class="underline">Platypus WPO</span>
+              which handled work and progress order in photography type of
+              business. Built with Laravel as the engine, AdminLTE as frontend
+              view backbone and jQuery as its view framework.
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -83,6 +85,9 @@ export default {
 </script>
 
 <style scoped>
+.writing {
+  align-items: flex-start;
+}
 .page:after {
   content: '';
   position: absolute;

@@ -1,49 +1,51 @@
 <template>
-  <div id="page-nov-2016" class="page">
+  <article id="page-nov-2016" class="page">
     <h1 class="title-date">Nov 2016</h1>
-    <transition name="fade-2" appear>
-      <div class="content">
-        <p>
-          Maintenance time! This time I realized that I'm probably a hardworker.
-          I couldn't stop figuring stacks to trace until their end. Line by
-          line. I had to memoize the messages and its type of errors. And had
-          write them on my old personal note at the same time. I don't know. It
-          was fun, I think.
-        </p>
-        <p>
-          Starting from this month until 2 the others, there are 3 projects ⁠— I
-          could remember ⁠— had to maintain. I think its more than just
-          maintaining, since my clients were asking bunch of features that
-          didn't previously exist.
-        </p>
-      </div>
-    </transition>
-    <transition name="slide-left" appear>
-      <div class="projects">
-        <h2 class="title">Projects</h2>
-        <div class="list">
-          <div
-            class="item"
-            @mouseenter="karenAndChloeTitle = 'www.karenandchloe.com'"
-            @mouseleave="karenAndChloeTitle = 'Wordpress maintenance'"
-          >
-            <span class="underline">{{ karenAndChloeTitle }}</span
-            >. Ecommerce. Woocommerce integration, fixed pages styling issues,
-            etc.
-          </div>
-          <div
-            class="item"
-            @mouseenter="abangAbangTitle = 'abangabang.com'"
-            @mouseleave="abangAbangTitle = 'Wordpress bux fixing'"
-          >
-            <span class="underline">{{ abangAbangTitle }}</span
-            >. Marketplace. Fixed 3rd party plugin about multi marketplace
-            seller/vendor, fixed pages styling issues.
+    <div class="writing">
+      <transition name="fade-2" appear>
+        <div class="content">
+          <p>
+            Maintenance time! This time I realized that I'm probably a
+            hardworker. I couldn't stop figuring stacks to trace until their
+            end. Line by line. I had to memoize the messages and its type of
+            errors. And had write them on my old personal note at the same time.
+            I don't know. It was fun, I think.
+          </p>
+          <p>
+            Starting from this month until 2 the others, there are 3 projects ⁠—
+            I could remember ⁠— had to maintain. I think its more than just
+            maintaining, since my clients were asking bunch of features that
+            didn't previously exist.
+          </p>
+        </div>
+      </transition>
+      <transition name="fade-2" appear>
+        <div class="projects">
+          <h2 class="title">Projects</h2>
+          <div class="list">
+            <div
+              class="item"
+              @mouseenter="karenAndChloeTitle = 'www.karenandchloe.com'"
+              @mouseleave="karenAndChloeTitle = 'Wordpress maintenance'"
+            >
+              <span class="underline">{{ karenAndChloeTitle }}</span
+              >. Ecommerce. Woocommerce integration, fixed pages styling issues,
+              etc.
+            </div>
+            <div
+              class="item"
+              @mouseenter="abangAbangTitle = 'abangabang.com'"
+              @mouseleave="abangAbangTitle = 'Wordpress bux fixing'"
+            >
+              <span class="underline">{{ abangAbangTitle }}</span
+              >. Marketplace. Fixed 3rd party plugin about multi marketplace
+              seller/vendor, fixed pages styling issues.
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
-  </div>
+      </transition>
+    </div>
+  </article>
 </template>
 
 <script>
@@ -92,6 +94,9 @@ export default {
 </script>
 
 <style scoped>
+.writing {
+  display: flex;
+}
 .page:after {
   content: '';
   position: absolute;

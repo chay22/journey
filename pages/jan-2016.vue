@@ -1,75 +1,78 @@
 <template>
   <div id="page-jan-2016" class="page">
     <h1 class="title-date">Jan 2016</h1>
-    <transition name="fade-2" appear>
-      <div class="content">
-        <p>
-          Exceeded amount of curiousity had whispered me to get me taught by my
-          self about how to (accidentally) build a website. Thrown errors by
-          buggy Wordpress (plugin) lead me to documentations which should
-          procedurally read pieces to pieces. I created a Stack Overflow
-          account. Purposedly to learn by answering, with non-sense solutions. A
-          month right before I started to create a fully working site from
-          scratch.
-        </p>
-        <p>
-          Well, actually, I had copied bunch of snippets from other works. But,
-          that time, I knew (slightly) what I pasted.
-        </p>
+    <div class="writing">
+      <div class="content-wrapper">
+        <transition name="slide-left" appear>
+          <div class="content">
+            <p>
+              Exceeded amount of curiousity had whispered me to get me taught by
+              my self about how to (accidentally) build a website. Thrown errors
+              by buggy Wordpress (plugin) lead me to documentations which should
+              procedurally read pieces to pieces. I created a Stack Overflow
+              account. Purposedly to learn by answering, with non-sense
+              solutions. A month right before I started to create a fully
+              working site from scratch.
+            </p>
+            <p>
+              Well, actually, I had copied bunch of snippets from other works.
+              But, that time, I knew (slightly) what I pasted.
+            </p>
+          </div>
+        </transition>
+
+        <transition name="slide-top" appear>
+          <a
+            href="https://stackoverflow.com/users/5816907/chay22"
+            target="_blank"
+            class="so-"
+            @mouseenter="showSoTooltip = true"
+            @mouseleave="showSoTooltip = false"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+              <path
+                class="st0"
+                d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z"
+              />
+              <path
+                class="st1"
+                d="M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z"
+              />
+            </svg>
+            <div v-if="showSoTooltip" class="tooltip">
+              <span class="tooltip-text">StackOverflow</span>
+              <span class="tooltip-goto">⟶</span>
+            </div>
+          </a>
+        </transition>
       </div>
-    </transition>
-    <transition name="fade-3" appear>
-      <a
-        href="https://stackoverflow.com/users/5816907/chay22"
-        target="_blank"
-        class="so-"
-        @mouseenter="showSoTooltip = true"
-        @mouseleave="showSoTooltip = false"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-          <path class="st0" d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z" />
-          <path
-            class="st1"
-            d="M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z"
-          />
-        </svg>
-        <div v-if="showSoTooltip" class="tooltip">
-          <span class="tooltip-text">StackOverflow</span>
-          <span class="tooltip-goto">⟶</span>
-        </div>
-      </a>
-    </transition>
-    <transition name="slide-left" appear>
-      <div
-        class="projects scrollable"
-        style="overflow: hidden; visibility: hidden; opacity: 0;"
-        @mouseenter="onProjectMouseEnter"
-        @mouseleave="onProjectMouseLeave"
-      >
-        <h2 class="title">Projects</h2>
-        <div class="list">
-          <div class="item">
-            <span class="underline">Twitter Tool</span>
-            which provided bulk activities such as follow, unfollow, retweet,
-            favorite (now "like") and of course tweet. Built natively with PHP
-            and MySQL.
-          </div>
-          <div class="item">
-            <span class="underline">Automated Instagram Activity</span>
-            (abandoned) which did similar job with above. But, automated. Bunch
-            of <code>if/else</code> and <code>mt_rand()</code> got me forcefully
-            deleted the source code for giving me an
-            <em>unorganic behavior</em> for one account. Built natively with PHP
-            and MySQL.
-          </div>
-          <div class="item">
-            <span class="underline">Personal Website</span>
-            of mine. Filled with unimportant blog content. But, hey! I learned
-            SCSS, here! Built with Laravel and its bundling technologies.
+      <transition name="slide-right" appear>
+        <div class="projects">
+          <h2 class="title">Projects</h2>
+          <div class="list">
+            <div class="item">
+              <span class="underline">Twitter Tool</span>
+              which provided bulk activities such as follow, unfollow, retweet,
+              favorite (now "like") and of course tweet. Built natively with PHP
+              and MySQL.
+            </div>
+            <div class="item">
+              <span class="underline">Automated Instagram Activity</span>
+              (abandoned) which did similar job with above. But, automated.
+              Bunch of <code>if/else</code> and <code>mt_rand()</code> got me
+              forcefully deleted the source code for giving me an
+              <em>unorganic behavior</em> for one account. Built natively with
+              PHP and MySQL.
+            </div>
+            <div class="item">
+              <span class="underline">Personal Website</span>
+              of mine. Filled with unimportant blog content. But, hey! I learned
+              SCSS, here! Built with Laravel and its bundling technologies.
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -133,6 +136,17 @@ export default {
 </script>
 
 <style scoped>
+.writing {
+  align-items: flex-start;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  bottom: 5%;
+  right: 1px;
+}
 .page:before {
   content: '';
   position: absolute;
@@ -162,8 +176,8 @@ export default {
   height: 5rem;
   border: 0.3em solid #0e1d58;
   box-shadow: var(--rect-box-shadow);
-  margin-left: auto;
   position: relative;
+  margin: 1rem auto;
 }
 .st0 {
   fill: #bcbbbb;
@@ -181,7 +195,7 @@ export default {
   text-align: left;
   position: absolute;
   left: -2.75em;
-  bottom: -3em;
+  bottom: -3.5em;
   box-shadow: 3px 4px 1px rgba(0, 0, 0, 0.18);
   overflow: hidden;
   transform: scale(0, 1);

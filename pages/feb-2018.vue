@@ -1,12 +1,7 @@
 <template>
   <div id="page-feb-2018" class="page">
     <h1 class="title-date">Feb 2018</h1>
-    <transition name="fade-2" appear>
-      <div class="no-content">
-        <h2>I'm still writing this one.</h2>
-      </div>
-    </transition>
-    <transition name="slide-left" appear>
+    <transition name="slide-top" appear>
       <div class="projects">
         <h2 class="title">Projects</h2>
         <div class="list">

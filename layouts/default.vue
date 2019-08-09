@@ -214,18 +214,7 @@ button {
   font-size: 125%;
   font-weight: 500;
   flex-direction: column;
-  padding: 2rem 4em;
-}
-
-.page .content {
-  background-color: rgba(255, 255, 255, 0.81);
-  background-image: linear-gradient(177deg, #fff, #e4dddd, #d5d9e8, #c1cbf5);
-  padding: 1rem 1.5rem 0.75rem;
-  box-shadow: var(--rect-box-shadow);
-  border-radius: var(--rect-border-radius);
-  color: #020304;
-  font-weight: 350;
-  margin-bottom: 2em;
+  padding: 2rem 3rem;
 }
 
 .page h1.title-date {
@@ -237,65 +226,16 @@ body.page-blur .page {
   filter: blur(5px);
   transform: scale(1.1);
 }
-@keyframes fontweight {
-  from {
-    font-weight: 200;
-  }
-  to {
-    font-weight: 999;
-  }
-}
 
-.slide-down-enter,
-.slide-up-leave-active {
-  opacity: 0;
-  transform: translate(0, -2em);
-}
-.slide-down-leave-active,
-.slide-up-enter {
-  opacity: 0;
-  transform: translate(0, 2em);
-}
-
-.fade-2-enter-active,
-.fade-2-leave-active {
-  transition: opacity 2s;
-}
-.fade-2-enter,
-.fade-2-leave-active {
-  opacity: 0;
-}
-.fade-3-enter-active,
-.fade-3-leave-active {
-  transition: opacity 3s ease-in-out;
-}
-.fade-3-enter,
-.fade-3-leave-active {
-  opacity: 0;
-}
-
-.slide-left-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-left-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-left-enter,
-.slide-left-leave-to {
-  transform: translateX(-2em);
-  opacity: 0;
+.writing {
+  display: flex;
+  margin-top: 2rem;
 }
 .projects {
-  font-size: 1rem;
   font-weight: 300;
-  position: absolute;
-  left: 0;
-  bottom: 5%;
-  width: 36em;
+  width: 30rem;
   padding: 1rem;
-  z-index: 4;
   text-align: left;
-  max-height: 10em;
 }
 .projects.scrollable {
   overflow: scroll;
@@ -325,6 +265,8 @@ body.page-blur .page {
 .projects > .title {
   font-weight: 400;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #6f6f6f;
 }
 .projects .item {
   margin-bottom: 0.5rem;
@@ -332,6 +274,120 @@ body.page-blur .page {
 .projects .underline {
   border-bottom: 0.15em dotted #8997ce;
 }
+
+.page .content,
+.page .projects {
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.81);
+  background-image: linear-gradient(177deg, #fff, #e4dddd, #d5d9e8, #c1cbf5);
+  padding: 1rem 1.5rem 0.5rem;
+  box-shadow: var(--rect-box-shadow);
+  border-radius: var(--rect-border-radius);
+  color: #020304;
+  font-weight: 300;
+}
+
+.page .content {
+  bottom: 5%;
+  position: relative;
+  flex: 1;
+  z-index: 4;
+  right: -1px;
+}
+
+@keyframes fontweight {
+  from {
+    font-weight: 200;
+  }
+  to {
+    font-weight: 999;
+  }
+}
+
+.slide-down-enter,
+.slide-up-leave-active {
+  opacity: 0;
+  transform: translate(0, -2em);
+}
+.slide-down-leave-active,
+.slide-up-enter {
+  opacity: 0;
+  transform: translate(0, 2em);
+}
+
+.fade-1-enter-active,
+.fade-1-leave-active {
+  transition: opacity 1s;
+}
+.fade-1-enter,
+.fade-1-leave-active {
+  opacity: 0;
+}
+.fade-2-enter-active,
+.fade-2-leave-active {
+  transition: opacity 1.25s;
+}
+.fade-2-enter,
+.fade-2-leave-active {
+  opacity: 0;
+}
+.fade-3-enter-active,
+.fade-3-leave-active {
+  transition: opacity 3s ease-in-out;
+}
+.fade-3-enter,
+.fade-3-leave-active {
+  opacity: 0;
+}
+
+.slide-left-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-left-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-left-enter,
+.slide-left-leave-to {
+  transform: translateX(-2em);
+  opacity: 0;
+}
+
+.slide-right-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-right-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-right-enter,
+.slide-right-leave-to {
+  transform: translateX(2em);
+  opacity: 0;
+}
+
+.slide-top-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-top-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-top-enter,
+.slide-top-leave-to {
+  transform: translateY(2em);
+  opacity: 0;
+}
+
+.slide-bottom-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-bottom-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-bottom-enter,
+.slide-bottom-leave-to {
+  transform: translateY(-2em);
+  opacity: 0;
+}
+
 /*--stripe: 3px;
 height: .3em;
 background: repeating-linear-gradient(-45deg, currentColor 0 var(--stripe), transparent 0 calc(2 * var(--stripe)));*/
