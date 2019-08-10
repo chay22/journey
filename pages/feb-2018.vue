@@ -8,10 +8,10 @@
           <div class="item">
             <span class="underline">Live Quiz</span>. There was a segment for an
             company birthday event party made by PT. United Tractors Pandu
-            Engineering involved a live quiz where attendees are able to answer
-            the questions appeared on big screen. Built with Laravel 5.5 as CMS,
-            Reveal.js as main framework to show the questions and custom Vue.js
-            as CMS view.
+            Engineering which involved a live quiz where attendees are able to
+            answer the questions appeared on big screen through their own
+            smartphone . Built with Laravel 5.5 as CMS, Reveal.js as main
+            framework to show the questions and custom Vue.js as CMS view.
           </div>
           <div class="item">
             <span class="underline">Live Quiz</span>. A local birthday party. No

@@ -75,6 +75,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 .page:after {
   content: '';
   bottom: -8rem;
@@ -104,11 +105,12 @@ export default {
   width: 27rem;
 }
 .hello {
-  font-size: 8.8rem;
+  font-size: 6.8rem;
   font-weight: 625;
 }
+
 .my-name {
-  font-size: 2.1rem;
+  font-size: 1.65rem;
 }
 .my-name > .is {
   letter-spacing: -1px;
@@ -120,9 +122,10 @@ export default {
 .nickname {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .nickname > .preferred {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 200;
 }
 .nickname > .name {
@@ -131,13 +134,38 @@ export default {
   padding-left: 0.25em;
 }
 .description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem;
   background-color: #fff;
   color: #3759e2;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-weight: 400;
+  width: 80%;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 28.25em) {
+  .hello {
+    font-size: 8.8rem;
+  }
+  .my-name {
+    font-size: 2.1rem;
+  }
+  .nickname {
+    justify-content: initial;
+  }
+  .nickname > .preferred {
+    font-size: 1.75rem;
+  }
+  .nickname > .name {
+    font-size: 2.9rem;
+  }
+  .description {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
 }
 .hello::selection {
   color: #8e44ad;

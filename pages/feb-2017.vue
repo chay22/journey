@@ -1,25 +1,47 @@
 <template>
   <div id="page-feb-2017" class="page">
     <h1 class="title-date">Feb 2017</h1>
-    <transition name="slide-top" appear>
-      <div class="projects">
-        <h2 class="title">Projects</h2>
-        <div class="list">
-          <div class="item">
-            <span class="underline">FirstMedia</span>
-          </div>
-          <div
-            class="item"
-            @mouseenter="karenAndChloeTitle = 'www.karenandchloe.com'"
-            @mouseleave="karenAndChloeTitle = 'Wordpress maintenance'"
-          >
-            <span class="underline">{{ karenAndChloeTitle }}</span
-            >. Re-continue maintenance and bug fixing which mostly about pages
-            styling.
+    <div class="writing">
+      <transition name="slide-bottom" appear>
+        <div class="content">
+          <p>
+            A project I had to handle this time lend me so much time to learn
+            more and more things. I had realized what things needed if I start a
+            project next time. How should it written to share with my self in
+            the future. The way I had to do was knowing the tools I'm using. The
+            frameworks. The languages.
+          </p>
+          <p>
+            I had read every single word in every source code of tools I chose
+            to use. Then realize that everything was easier to debug when I did.
+            It also had fixed my doubt when the tool offers multiple ways to do
+            an operation. Like, for performance.
+          </p>
+        </div>
+      </transition>
+      <transition name="slide-top" appear>
+        <div class="projects">
+          <h2 class="title">Projects</h2>
+          <div class="list">
+            <div class="item">
+              <span class="underline">FirstMedia website</span>. Basically an
+              ecommerce site that mainly sells its product by writing. Its
+              products were consumed from wider project API. It comes with
+              custom CMS. Built with Laravel 5.4, Bootstrap and jQuery.
+            </div>
+            <div
+              class="item"
+              @mouseenter="karenAndChloeTitle = 'www.karenandchloe.com'"
+              @mouseleave="karenAndChloeTitle = 'Wordpress maintenance'"
+            >
+              <span class="underline">{{ karenAndChloeTitle }}</span
+              >. Re-continue maintenance and bug fixing which mostly about pages
+              styling.
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
   </div>
 </template>
 

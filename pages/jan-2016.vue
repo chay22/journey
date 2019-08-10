@@ -6,12 +6,12 @@
         <transition name="slide-left" appear>
           <div class="content">
             <p>
-              Exceeded amount of curiousity had whispered me to get me taught by
-              my self about how to (accidentally) build a website. Thrown errors
-              by buggy Wordpress (plugin) lead me to documentations which should
+              Exceeded amount of curiousity had whispered me to get me taught my
+              self about how to (accidentally) build a website. Thrown errors by
+              buggy Wordpress (plugin) lead me to documentations which should
               procedurally read pieces to pieces. I created a Stack Overflow
-              account. Purposedly to learn by answering, with non-sense
-              solutions. A month right before I started to create a fully
+              account. Purposedly to learn by answering (with non-sense
+              solutions). A month right before I started to create a fully
               working site from scratch.
             </p>
             <p>
@@ -142,10 +142,14 @@ export default {
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  flex: 1;
   position: relative;
   bottom: 5%;
   right: 1px;
+}
+@media screen and (min-width: 74.99em) {
+  .content-wrapper {
+    flex: 1;
+  }
 }
 .page:before {
   content: '';
@@ -238,6 +242,14 @@ export default {
   }
   to {
     margin-left: 0;
+  }
+}
+</style>
+
+<style>
+@media screen and (max-width: 50.245em) {
+  #page-jan-2016 ~ .device-no-support {
+    display: flex;
   }
 }
 </style>

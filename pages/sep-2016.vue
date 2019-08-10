@@ -12,7 +12,7 @@
           </p>
           <p>
             I had thinking about it, there is no chance for us to finish them
-            all within a month. Or two. Even three. I didn't care about it that
+            all within a month. Or two. Even more. I didn't care about it that
             much at that time. As a beginner, had to handle a project all by my
             self already gave me all I wanted to do. More than enough.
           </p>
@@ -36,7 +36,7 @@
               <span class="underline">Platypus WPO</span>
               which handled work and progress order in photography type of
               business. Built with Laravel as the engine, AdminLTE as frontend
-              view backbone and jQuery as its view framework.
+              template and jQuery as its framework.
             </div>
           </div>
         </div>
@@ -99,5 +99,13 @@ export default {
   height: 30%;
   z-index: -1;
   transform: rotate(-5deg) scale(1.1);
+}
+</style>
+
+<style>
+@media screen and (max-width: 59em) {
+  #page-sep-2016 ~ .device-no-support {
+    display: flex;
+  }
 }
 </style>

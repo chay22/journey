@@ -3,6 +3,10 @@
     <left-sidebar />
     <nuxt />
     <external />
+    <div class="device-no-support">
+      Could you please move to your wider desktop device so I can show you my
+      stuff properly? I need more time to develop this. Sorry.
+    </div>
   </div>
 </template>
 
@@ -103,7 +107,7 @@ export default {
   --color-primary: #3759e2;
   --color-secondary: #213586;
   --color-accent: #fff;
-  --sidebar-width: 15rem;
+  --sidebar-width: 1px;
   font-size: 16px;
 }
 
@@ -199,6 +203,19 @@ button {
   z-index: 5;
 }
 
+.left-sidebar {
+  display: none;
+}
+
+@media screen and (min-width: 74.99em) {
+  .left-sidebar {
+    display: flex;
+  }
+  :root {
+    --sidebar-width: 15rem;
+  }
+}
+
 .page {
   position: fixed;
   width: calc(100% - var(--sidebar-width));
@@ -214,7 +231,14 @@ button {
   font-size: 125%;
   font-weight: 500;
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 2rem 1.5rem;
+}
+
+@media screen and (min-width: 34.3125em) {
+  .page {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .page h1.title-date {
@@ -230,13 +254,29 @@ body.page-blur .page {
 .writing {
   display: flex;
   margin-top: 2rem;
+  flex-direction: column;
 }
+
+@media screen and (min-width: 40.625em) {
+  .writing {
+    flex-direction: row;
+  }
+}
+
 .projects {
   font-weight: 300;
-  width: 30rem;
   padding: 1rem;
   text-align: left;
 }
+@media screen and (min-width: 75em) {
+  .projects {
+    width: 27em;
+  }
+  .writing .projects {
+    flex: none;
+  }
+}
+
 .projects.scrollable {
   overflow: scroll;
   overflow-x: hidden;
@@ -290,9 +330,14 @@ body.page-blur .page {
 .page .content {
   bottom: 5%;
   position: relative;
-  flex: 1;
   z-index: 4;
   right: -1px;
+}
+
+@media screen and (min-width: 74.99em) {
+  .page .writing .content {
+    flex: 1;
+  }
 }
 
 @keyframes fontweight {
@@ -388,6 +433,30 @@ body.page-blur .page {
   opacity: 0;
 }
 
+.device-no-support {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: var(--color-primary);
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 24em) {
+  .device-no-support {
+    padding: 5em;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 74.99em) {
+  .device-no-support {
+    /*display: flex;*/
+  }
+}
 /*--stripe: 3px;
 height: .3em;
 background: repeating-linear-gradient(-45deg, currentColor 0 var(--stripe), transparent 0 calc(2 * var(--stripe)));*/

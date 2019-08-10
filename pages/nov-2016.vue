@@ -5,11 +5,11 @@
       <transition name="fade-2" appear>
         <div class="content">
           <p>
-            Maintenance time! This time I realized that I'm probably a
-            hardworker. I couldn't stop figuring stacks to trace until their
-            end. Line by line. I had to memoize the messages and its type of
-            errors. And had write them on my old personal note at the same time.
-            I don't know. It was fun, I think.
+            Maintenance time! This time I realized that I'm probably a problem
+            solver. I couldn't stop figuring stacks of errors to trace until
+            their end. Line by line. I had to memoize the messages and its type
+            of errors. And had write them on my old personal note at the same
+            time. I don't know. It was fun, I think.
           </p>
           <p>
             Starting from this month until 2 the others, there are 3 projects ⁠—
@@ -96,6 +96,12 @@ export default {
 <style scoped>
 .writing {
   display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 42.375em) {
+  .writing {
+    flex-direction: row;
+  }
 }
 .page:after {
   content: '';

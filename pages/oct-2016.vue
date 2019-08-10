@@ -5,8 +5,8 @@
       <transition name="slide-left" appear>
         <div class="content">
           <p>
-            An usually-remote mate had coming to the party. We had in charge to
-            keep building a hotel management system together. A thing that was I
+            A usually-remote mate had coming to the party. We had in charge to
+            keep building a hotel management system together. A thing that I was
             dreamed of. Sharing codes! The project was started on ⁠— if I'm not
             mistaken ⁠— 2015. A complex building inapropiately designed had
             feeded us with full of stinky dressing spaghetti. Thus, we had
@@ -20,7 +20,7 @@
           </p>
           <p>
             Also, since then, one of my dream project I want to create is
-            <abbr title="Enterprise resource planning">ERP</abbr>. And that's
+            <abbr title="Enterprise Resource Planning">ERP</abbr>. And that's
             why I (re)try to learn this domain from last month (Jul 2019). All
             by my self.
           </p>
@@ -108,5 +108,13 @@ export default {
   height: 40%;
   z-index: -1;
   transform: rotate(25deg) scale(1.5);
+}
+</style>
+
+<style>
+@media screen and (max-width: 48.75em) {
+  #page-oct-2016 ~ .device-no-support {
+    display: flex;
+  }
 }
 </style>

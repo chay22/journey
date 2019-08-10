@@ -132,3 +132,11 @@ export default {
   transform: rotate(-2deg) scale(1.5);
 }
 </style>
+
+<style>
+@media screen and (max-width: 51.625em) {
+  #page-dec-2016 ~ .device-no-support {
+    display: flex;
+  }
+}
+</style>

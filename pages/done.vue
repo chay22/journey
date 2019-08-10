@@ -15,7 +15,7 @@
       <div class="conclusion">
         <p>
           The list (of projects) was carefully picked based on amount of fees I
-          received, knowledge I acquired and — most importantly — stuffs I
+          received, knowledge I acquired and most importantly stuffs I could
           remember. There are some more — according to programming — things
           (which I might later put them on the list) I've done. Such as WiFi
           reconnector, Arduino-involved stuffs, WhatsApp broadcaster & auto
@@ -138,7 +138,11 @@ export default {
 .page {
   justify-content: initial;
   align-items: initial;
-  padding-top: 6rem;
+}
+@media screen and (min-width: 74.99em) {
+  .page {
+    padding-top: 6rem;
+  }
 }
 .page:before {
   content: '';
@@ -151,6 +155,7 @@ export default {
   height: 30%;
   z-index: -1;
 }
+
 .now-you-know {
   font-size: 2.475rem;
   font-weight: 900;
@@ -211,8 +216,13 @@ export default {
 .mamang {
   z-index: -1;
   position: fixed;
-  bottom: -50%;
+  bottom: -100%;
   animation: dance 2.5s 10s infinite alternate ease-in-out;
+}
+@media screen and (min-width: 74.99em) {
+  .mamang {
+    bottom: -50%;
+  }
 }
 @keyframes dance {
   from,
@@ -232,6 +242,39 @@ export default {
   }
   75% {
     transform: rotate(10deg);
+  }
+}
+
+@media screen and (max-width: 75em) {
+  .fun-conclusion,
+  .conclusion {
+    margin: 0 auto 1.5rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 55.625em) {
+  .thanks-to h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .thanks-list {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 35.3125em) {
+  .thanks-to {
+    display: none;
+  }
+}
+</style>
+
+<style>
+@media screen and (max-width: 26.8125em) {
+  .device-no-support {
+    display: flex;
   }
 }
 </style>
