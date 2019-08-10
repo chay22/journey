@@ -452,11 +452,7 @@ body.page-blur .page {
     font-size: 1.5em;
   }
 }
-@media screen and (max-width: 74.99em) {
-  .device-no-support {
-    /*display: flex;*/
-  }
-}
+
 /*--stripe: 3px;
 height: .3em;
 background: repeating-linear-gradient(-45deg, currentColor 0 var(--stripe), transparent 0 calc(2 * var(--stripe)));*/

@@ -110,13 +110,6 @@ export default {
         this.$store.dispatch('pages/setLastScrollTop')
         this.$store.dispatch('pages/ready')
         window.scrollTo(0, 2)
-        setTimeout(() => {
-          this.$el.querySelector('.scrollable').style.overflow = ''
-          this.$el.querySelector('.scrollable').style.visibility = ''
-          this.$el.querySelector('.scrollable').velocity({
-            opacity: 1
-          })
-        }, 1200)
       }, 200)
     })
   },

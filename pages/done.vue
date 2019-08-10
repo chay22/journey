@@ -138,10 +138,12 @@ export default {
 .page {
   justify-content: initial;
   align-items: initial;
+  justify-content: center;
 }
 @media screen and (min-width: 74.99em) {
   .page {
     padding-top: 6rem;
+    justify-content: initial;
   }
 }
 .page:before {
