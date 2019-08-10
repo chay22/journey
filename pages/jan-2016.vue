@@ -212,7 +212,7 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0.3em;
+  top: 0.35em;
   left: 0;
   z-index: -1;
   transform: rotate(-5deg);
