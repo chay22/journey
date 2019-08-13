@@ -177,7 +177,21 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@bazzite/nuxt-netlify'],
+  modules: [
+    [
+      '@bazzite/nuxt-netlify',
+      {
+        mergeSecurityHeaders: true,
+        redirects: [
+          {
+            from: '/*',
+            to: '/index.html',
+            status: 200
+          }
+        ]
+      }
+    ]
+  ],
   /*
    ** Build configuration
    */
@@ -188,15 +202,5 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  netlify: {
-    mergeSecurityHeaders: true,
-    redirects: [
-      {
-        from: '/*',
-        to: '/index.html',
-        status: 200
-      }
-    ]
   }
 }
