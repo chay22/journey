@@ -1,10 +1,14 @@
 let routerBase = {}
 let publicRoot = '/'
 let siteDomain = ''
+let HOST = '127.0.0.1'
+let PORT = 3000
 let mode = 'spa'
 
 if (process.env.DEPLOY_ENV === 'NETLIFY') {
   siteDomain = 'https://chay-timeline.netlify.com'
+  HOST = siteDomain
+  PORT = null
   mode = 'universal'
 } else if (process.DEPLOY_ENV === 'GH_PAGES') {
   siteDomain = 'https://chay22.github.io'
@@ -25,7 +29,9 @@ module.exports = {
   ...routerBase,
   env: {
     baseRootUrl: publicRoot,
-    siteDomain
+    siteDomain,
+    HOST,
+    PORT
   },
   /*
    ** Headers of the page
