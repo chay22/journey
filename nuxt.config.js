@@ -5,6 +5,7 @@ let mode = 'spa'
 
 if (process.env.DEPLOY_ENV === 'NETLIFY') {
   siteDomain = 'https://chay-timeline.netlify.com'
+  mode = 'universal'
 } else if (process.DEPLOY_ENV === 'GH_PAGES') {
   siteDomain = 'https://chay22.github.io'
   publicRoot = '/journey/'
