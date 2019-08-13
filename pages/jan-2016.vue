@@ -29,7 +29,11 @@
             @mouseenter="showSoTooltip = true"
             @mouseleave="showSoTooltip = false"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 120 120"
+              role="image"
+            >
               <path
                 class="st0"
                 d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z"

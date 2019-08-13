@@ -1,17 +1,26 @@
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/journey/'
-        }
-      }
-    : {}
-const publicRoot = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/journey/' : '/'
-const siteDomain =
-  process.env.DEPLOY_ENV === 'GH_PAGES' ? 'https://chay22.github.io' : ''
+let routerBase = {}
+let publicRoot = '/'
+let siteDomain = ''
+let mode = 'spa'
 
-export default {
-  mode: 'spa',
+if (process.env.DEPLOY_ENV === 'NETLIFY') {
+  siteDomain = 'https://chay-timeline.netlify.com'
+} else if (process.DEPLOY_ENV === 'GH_PAGES') {
+  siteDomain = 'https://chay22.github.io'
+  publicRoot = '/journey/'
+  routerBase = {
+    router: {
+      base: '/journey/'
+    }
+  }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  mode = 'universal'
+}
+
+module.exports = {
+  mode,
   ...routerBase,
   env: {
     baseRootUrl: publicRoot,
@@ -155,7 +164,7 @@ export default {
     { src: '~/plugins/feature-detect', mode: 'client' },
     { src: '~/plugins/velocity', mode: 'client' },
     { src: '~/plugins/cta-states', mode: 'client' },
-    { src: '~/plugins/seo', mode: 'client' }
+    { src: '~/plugins/seo' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -167,7 +176,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@bazzite/nuxt-netlify'],
   /*
    ** Build configuration
    */
@@ -178,5 +187,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  netlify: {
+    //
   }
 }
