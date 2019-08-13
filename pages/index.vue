@@ -86,6 +86,7 @@ export default {
 .greets {
   text-align: center;
   font-weight: 300;
+  font-size: 0.8em;
 }
 .greets:hover .exclamation {
   animation: fontweight 0.8s infinite alternate ease-in-out;
@@ -105,12 +106,13 @@ export default {
   width: 27rem;
 }
 .hello {
-  font-size: 6.8rem;
-  font-weight: 625;
+  font-size: 7em;
+  font-weight: 600;
 }
 
 .my-name {
-  font-size: 1.65rem;
+  font-size: 1.65em;
+  margin-top: -0.5em;
 }
 .my-name > .is {
   letter-spacing: -1px;
@@ -125,45 +127,42 @@ export default {
   justify-content: center;
 }
 .nickname > .preferred {
-  font-size: 1.25rem;
-  font-weight: 200;
+  font-size: 1.25em;
+  font-weight: 100;
 }
 .nickname > .name {
-  font-size: 3.25rem;
+  font-size: 3em;
   font-weight: 800;
   padding-left: 0.25em;
 }
 .description {
-  font-size: 1rem;
-  padding: 0.5rem;
+  font-size: 1em;
+  padding: 0.5em;
   background-color: #fff;
   color: #3759e2;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-weight: 400;
-  width: 80%;
-  margin: 1rem auto;
+  width: 90%;
+  margin: 0.5em auto;
 }
 @media screen and (min-width: 28.25em) {
   .hello {
-    font-size: 8.8rem;
+    font-size: 7.7em;
   }
   .my-name {
-    font-size: 2.1rem;
-  }
-  .nickname {
-    justify-content: initial;
+    font-size: 1.8em;
   }
   .nickname > .preferred {
-    font-size: 1.75rem;
+    font-size: 1.5em;
   }
   .nickname > .name {
-    font-size: 2.9rem;
+    font-size: 2.75em;
   }
   .description {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     width: 100%;
   }
 }

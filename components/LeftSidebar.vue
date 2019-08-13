@@ -52,7 +52,11 @@ export default {
         $el = this.$el.querySelector(`[data-path="${currentPath}"]`)
       }
 
-      const offsetTop = $el.offsetTop - 45
+      let offsetTop = $el.offsetTop
+
+      if (currentPath !== '/done') {
+        offsetTop -= 22
+      }
 
       this.$el.querySelector('.progress').velocity({
         height: offsetTop + 'px'
@@ -65,7 +69,7 @@ export default {
 <style>
 .left-sidebar {
   display: flex;
-  padding: 3rem 3.5rem;
+  padding: 1.5rem 3.5rem;
 }
 .left-sidebar > .line {
   height: 98.5%;
@@ -123,58 +127,57 @@ export default {
 }
 .left-sidebar a {
   color: #fff;
-  font-weight: 300;
   text-decoration: none;
 }
 
 @keyframes progress-p-p1 {
   0% {
-    width: 0.765em;
-    height: 0.765em;
-    left: -4px;
-    top: 6.5px;
+    width: 0.665em;
+    height: 0.665em;
+    left: -3px;
+    top: 5.5px;
   }
   25% {
-    width: 0.875em;
-    height: 0.875em;
-    left: -5px;
-    top: 6px;
+    width: 0.775em;
+    height: 0.775em;
+    left: -4px;
+    top: 5px;
   }
   75% {
     width: 0.875em;
     height: 0.875em;
     left: -7px;
-    top: 6px;
+    top: 4px;
   }
   100% {
     width: 0.85em;
     height: 0.85em;
     left: -1px;
-    top: 6px;
+    top: 3px;
   }
 }
 @keyframes progress-p-p2 {
   0% {
-    width: 1.25em;
-    height: 1.25em;
-    left: 2px;
-    top: -5px;
+    width: 1.2em;
+    height: 1.2em;
+    left: 1px;
+    top: -3px;
   }
   25% {
-    width: 1.25em;
-    height: 1.25em;
+    width: 1.15em;
+    height: 1.15em;
     left: 0px;
     top: 0px;
   }
   75% {
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.25em;
+    height: 1.25em;
     left: -3px;
     top: 0px;
   }
   100% {
-    width: 1.3em;
-    height: 1.3em;
+    width: 1.25em;
+    height: 1.25em;
     left: -6px;
     top: 0px;
   }

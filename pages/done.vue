@@ -15,11 +15,11 @@
       <div class="conclusion">
         <p>
           The list (of projects) was carefully picked based on amount of fees I
-          received, knowledge I acquired and most importantly stuffs I could
-          remember. There are some more — according to programming — things
-          (which I might later put them on the list) I've done. Such as WiFi
-          reconnector, Arduino-involved stuffs, WhatsApp broadcaster & auto
-          reply, chat bot (including WhatsApp), etc.
+          received, knowledge I acquired, efforts taken and most importantly
+          stuffs I could remember. There are some more — according to
+          programming — things (which I might later put them on the list) I've
+          done. Such as WiFi reconnector, Arduino-involved stuffs, WhatsApp
+          broadcaster & auto reply, chat bot (including WhatsApp), etc.
         </p>
         <p>
           I'll try to list them all while fixing my English at my leisure.
@@ -64,7 +64,7 @@
             v-fonts.com
           </div>
           <div class="thanks">
-            @typeler
+            US Web Design System
           </div>
           <div class="thanks">
             @LeaVerou
@@ -142,7 +142,7 @@ export default {
 }
 @media screen and (min-width: 74.99em) {
   .page {
-    padding-top: 6rem;
+    padding-top: 6em;
     justify-content: initial;
   }
 }

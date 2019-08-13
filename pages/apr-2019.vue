@@ -1,17 +1,13 @@
 <template>
   <div id="page-jan-2019" class="page">
-    <h1 class="title-date">Jan 2019</h1>
-    <transition name="slide-bottom" appear>
+    <h1 class="title-date">Apr 2019</h1>
+    <transition name="slide-top" appear>
       <div class="projects">
         <h2 class="title">Projects</h2>
         <div class="list">
-          <div
-            class="item"
-            @mouseenter="ulpBulunganTitle = 'Kab. Bulungan, Kalimantan Utara'"
-            @mouseleave="ulpBulunganTitle = 'Government procurement system'"
-          >
-            <span class="underline">{{ ulpBulunganTitle }}</span
-            >. Built with Laravel 5.6.
+          <div class="item">
+            <span class="underline">Rigid pavement procurement system</span>.
+            Built with Laravel 5.8.
           </div>
         </div>
       </div>
@@ -23,9 +19,9 @@
 export default {
   head() {
     const SEO = this.$seo.set({
-      title: 'Chay - Jan 2019',
-      description: 'Chay journey on January 2019',
-      slug: 'jan-2019'
+      title: 'Chay - Apr 2019',
+      description: 'Chay journey on April 2019',
+      slug: 'apr-2019'
     })
 
     return {
@@ -39,11 +35,6 @@ export default {
     }
 
     return 'slide-down'
-  },
-  data() {
-    return {
-      ulpBulunganTitle: 'Government procurement system'
-    }
   },
   mounted() {
     document.body.style.overflow = 'hidden'
@@ -70,10 +61,22 @@ export default {
   width: 100%;
   background-image: linear-gradient(90deg, #213586, #1c3492, #2d46ab, #2641ab);
   content: '';
-  top: 0;
-  height: 30%;
+  bottom: 10%;
+  height: 20%;
   z-index: -1;
-  transform: rotate(4deg) scale(1.1);
+  transform: rotate(-1deg) scale(1.1);
+}
+.page:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background-color: #3759e2;
+  content: '';
+  bottom: 26%;
+  height: 20%;
+  z-index: -1;
+  transform: rotate(3deg) scale(1.1);
 }
 @keyframes bgslide {
   from {

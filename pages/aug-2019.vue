@@ -1,17 +1,13 @@
 <template>
   <div id="page-jan-2019" class="page">
-    <h1 class="title-date">Jan 2019</h1>
-    <transition name="slide-bottom" appear>
+    <h1 class="title-date">Aug 2019</h1>
+    <transition name="slide-left" appear>
       <div class="projects">
         <h2 class="title">Projects</h2>
         <div class="list">
-          <div
-            class="item"
-            @mouseenter="ulpBulunganTitle = 'Kab. Bulungan, Kalimantan Utara'"
-            @mouseleave="ulpBulunganTitle = 'Government procurement system'"
-          >
-            <span class="underline">{{ ulpBulunganTitle }}</span
-            >. Built with Laravel 5.6.
+          <div class="item">
+            <span class="underline">Simple POS</span>. A very simple Point of
+            Sale system. Built with Laravel 5.8.
           </div>
         </div>
       </div>
@@ -23,9 +19,9 @@
 export default {
   head() {
     const SEO = this.$seo.set({
-      title: 'Chay - Jan 2019',
-      description: 'Chay journey on January 2019',
-      slug: 'jan-2019'
+      title: 'Chay - Aug 2019',
+      description: 'Chay journey on Aug 2019',
+      slug: 'aug-2019'
     })
 
     return {
@@ -39,11 +35,6 @@ export default {
     }
 
     return 'slide-down'
-  },
-  data() {
-    return {
-      ulpBulunganTitle: 'Government procurement system'
-    }
   },
   mounted() {
     document.body.style.overflow = 'hidden'
@@ -69,11 +60,21 @@ export default {
   right: 0;
   width: 100%;
   background-image: linear-gradient(90deg, #213586, #1c3492, #2d46ab, #2641ab);
-  content: '';
-  top: 0;
-  height: 30%;
+  bottom: 20%;
+  height: 76%;
   z-index: -1;
-  transform: rotate(4deg) scale(1.1);
+  transform: rotate(-5deg) scale(1.1);
+}
+.page:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background-color: #3759e2;
+  bottom: -29%;
+  height: 100%;
+  z-index: -1;
+  transform: rotate(53deg) scale(1.51);
 }
 @keyframes bgslide {
   from {

@@ -57,6 +57,18 @@ export const state = () => ({
       label: 'Jan 2019'
     },
     {
+      path: '/apr-2019',
+      label: 'Apr 2019'
+    },
+    {
+      path: '/jun-2019',
+      label: 'Jun 2019'
+    },
+    {
+      path: '/aug-2019',
+      label: 'Aug 2019'
+    },
+    {
       path: '/done',
       label: 'Done'
     }
